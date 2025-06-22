@@ -1,0 +1,1 @@
+Este algoritmo foi desenvolvido como parte de um projeto acadêmico com o objetivo de simular um sistema de cadastro e gerenciamento de equipamentos, com controle de acesso por login (administrador e usuário comum).O sistema permite cadastrar, listar, editar, excluir e pesquisar equipamentos por sala, além de simular o salvamento e carregamento de dados usando vetores
