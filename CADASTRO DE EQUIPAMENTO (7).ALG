@@ -1,8 +1,8 @@
 Algoritmo "CADASTRO DE EQUIPAMENTO"
 //
 //
-// DescriÁ„o   : Aqui vocÍ descreve o que o programa faz! (funÁ„o)
-// Autor(a)    : Reginaldo e Augusto
+// Descri√ß√£o   : Aqui voc√™ descreve o que o programa faz! (fun√ß√£o)
+// Autor(a)    : Reginaldo 
 // Data atual  : 22/05/2025
 Var
 
@@ -22,11 +22,11 @@ Procedimento Condic()
 Inicio
    Para c de 1 ate adic faca
       Tempo(100)
-      Escreval(c,"∫ Equipamento")
+      Escreval(c,"¬∫ Equipamento")
       Escreval()
       Escreval("* Equipamento: " ,pc[c])
-      Escreval("* CondiÁ„o: " ,condicao[c])
-      Escreval(" LocalizaÁ„o: ",estal_type[c]," ",maiusc(equipamentocorredor[c])," SALA",equipamentosala[c])
+      Escreval("* Condi√ß√£o: " ,condicao[c])
+      Escreval(" Localiza√ß√£o: ",estal_type[c]," ",maiusc(equipamentocorredor[c])," SALA",equipamentosala[c])
       Escreval("----------------------------------------------------")
       Tempo(500)
       Tempo(20)
@@ -61,7 +61,7 @@ FimProcedimento
 Procedimento cad_user()
 Inicio
    Escreval("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-   Escreval("|              CADASTRO DE USU¡RIO                   |")
+   Escreval("|              CADASTRO DE USU√ÅRIO                   |")
    Escreval("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
    Escreval()
 FimProcedimento
@@ -69,7 +69,7 @@ FimProcedimento
 Procedimento edt()
 Inicio
    Escreval("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-   Escreval("|               EDI«√O DE CADASTRO                   |")
+   Escreval("|               EDI√á√ÉO DE CADASTRO                   |")
    Escreval("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
    Escreval()
 FimProcedimento
@@ -85,7 +85,7 @@ FimProcedimento
 Procedimento seg()
 Inicio
    Escreval("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-   Escreval("|          ASSISTENTE DE SEGURAN«A                   |")
+   Escreval("|          ASSISTENTE DE SEGURAN√áA                   |")
    Escreval("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
    Escreval()
 FimProcedimento
@@ -106,9 +106,22 @@ Inicio
    Escreval()
 FimProcedimento
 //----------------------------------------------------------------
+Procedimento aguarde()
+Inicio
+   Escreval()
+   Escreva("AGUARDE .")
+   Tempo(400)
+   Escreva(".")
+   Tempo(400)
+   Escreva(".")
+   Tempo(400)
+   Escreva(".")
+   Tempo(400)
+   Tempo(2)
+   LimpaTela
+FimProcedimento
 
 Inicio
-
 
    //----------------------------------------------------------------
 
@@ -122,36 +135,41 @@ Inicio
       sairlogin <- falso
       REPITA
          sistema()
-         Escreva("[1] CR…DITOS")
-         Escreva("  [2] ACESSAR SISTEMA")
-         Escreva("  [3] SAIR DO SISTEMA")
+         Escreval("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+         Escreval("x                                                    x")
+         Escreval("x                  [1] CR√âDITOS                      x")
+         Escreval("x                  [2] ACESSAR SISTEMA               x")
+         Escreval("x                  [3] SAIR DO SISTEMA               x")
+         Escreval("x                                                    x")
+         Escreval("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
          Escreval()
+         Escreval("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
          Escreval()
-         Escreva("OP«√O:")
+         Escreva(" OP√á√ÉO: ")
          Leia(sys)
-         LimpaTela
+         aguarde()
 
          Escolha sys
 
          CASO 1
 
             sistema()
-            Escreval("Este algoritmo foi desenvolvido como parte de um projeto acadÍmico com o objetivo de simular um sistema de cadastro e gerenciamento de equipamentos, com controle de acesso por login (administrador e usu·rio comum).O sistema permite cadastrar, listar, editar, excluir e pesquisar equipamentos por sala, alÈm de simular o salvamento e carregamento de dados usando vetores.")
+            Escreval("Este algoritmo foi desenvolvido como parte de um projeto acad√™mico com o objetivo de simular um sistema de cadastro e gerenciamento de equipamentos, com controle de acesso por login (administrador e usu√°rio comum).O sistema permite cadastrar, listar, editar, excluir e pesquisar equipamentos por sala, al√©m de simular o salvamento e carregamento de dados usando vetores.")
             Escreval()
             Escreval("Desenvolvedor: Reginaldo Marcilio")
             Escreval("Ferramenta: Visualg (.ALG)")
             Escreval("Ano: 2025" )
-            Escreval("Curso: TÈcnico em Inform·tica")
-            Escreval("InstituiÁ„o: CEDUP Joinville")
+            Escreval("Curso: T√©cnico em Inform√°tica")
+            Escreval("Institui√ß√£o: CEDUP Joinville")
             Escreval()
-            Escreval("O algoritmo tambÈm conta com um sistema de seguranÁa simulado, menus especÌficos por nÌvel de acesso e funcionalidades pensadas para reforÁar conceitos de lÛgica de programaÁ„o, estrutura de dados e interaÁ„o com o usu·rio.")
+            Escreval("O algoritmo tamb√©m conta com um sistema de seguran√ßa simulado, menus espec√≠ficos por n√≠vel de acesso e funcionalidades pensadas para refor√ßar conceitos de l√≥gica de programa√ß√£o, estrutura de dados e intera√ß√£o com o usu√°rio.")
             Tempo(10000)
             Tempo(2)
             LimpaTela
 
          CASO 2
 
-            // Cadastro de usu·rios e senhas de base
+            // Cadastro de usu√°rios e senhas de base
             usuarios[1] <- "professor"
             usuarios[2] <- "aluno"
             senhas[1] <- "admin"
@@ -163,7 +181,7 @@ Inicio
                confirm()
                Escreva("Informe Login de acesso: ")
                Leia(login)
-               LimpaTela
+               aguarde()
 
                // Verifica login
                Para j de 1 ate 10 faca
@@ -172,9 +190,10 @@ Inicio
 
                      // Login encontrado, pede senha
                      confirm()
-                     Escreval("Login: ", login)
                      Escreval()
-                     Escreva("Informe a senha: ")
+                     Escreval("LOGIN: ", login)
+                     Escreval()
+                     Escreva("INFORME A SENHA: ")
                      Leia(senha)
 
                      Se minusc(senha) = minusc(senhas[j]) ENTAO
@@ -201,7 +220,7 @@ Inicio
                Se achou_usuario = falso ENTAO
                   confirm()
                   Escreval("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-                  Escreval("               USU¡RIO N√O CADASTRADO")
+                  Escreval("               USU√ÅRIO N√ÉO CADASTRADO")
                   Escreval("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
                   Tempo(3000)
                   Tempo(2)
@@ -216,7 +235,8 @@ Inicio
                Escreval("                  ACESSO LIBERADO                     ")
                Escreval("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
                Escreval()
-               Escreval("NÌvel de acesso: ", maiusc(nivel))
+               Escreval("N√≠vel de acesso: ", maiusc(nivel))
+               aguarde()
                Tempo(2500)
                Tempo(1)
             FimSe
@@ -233,8 +253,9 @@ Inicio
                      Escreval("[6] Trocar Login de Acesso")
                      Escreval("[7] Sair")
                      Escreval ()
-                     Escreva("OP«√O SELECIONADA: ")
+                     Escreva("OP√á√ÉO SELECIONADA: ")
                      Leia(a)
+                     aguarde()
                      LimpaTela
 
                   senao
@@ -248,8 +269,9 @@ Inicio
                            Escreval ("[3] Trocar Login de Acesso")
                            Escreval ("[4] Sair")
                            Escreval ()
-                           Escreva("OP«√O SELECIONADA: ")
+                           Escreva("OP√á√ÉO SELECIONADA: ")
                            Leia(k)
+                           aguarde()
                            LimpaTela
 
                            Escolha k
@@ -278,10 +300,10 @@ Inicio
 
                      REPITA
                         confirm()
-                        Escreval("[1] - CADASTRAR NOVO USU¡RIO")
+                        Escreval("[1] - CADASTRAR NOVO USU√ÅRIO")
                         Escreval("[2] - RETORNAR AO MENU")
                         Escreval()
-                        Escreva("OP«√O: ")
+                        Escreva("OP√á√ÉO: ")
                         Leia(adic_cad)
                         LimpaTela
 
@@ -300,7 +322,7 @@ Inicio
 
                            Se cad_ok = falso ENTAO
                               confirm()
-                              Escreval("Limite de usu·rios atingido.")
+                              Escreval("Limite de usu√°rios atingido.")
                               Tempo(2000)
                               LimpaTela
 
@@ -322,7 +344,7 @@ Inicio
 
                                  Se duplicado ENTAO
                                     confirm()
-                                    Escreval("Este login j· est· cadastrado. Tente outro.")
+                                    Escreval("Este login j√° est√° cadastrado. Tente outro.")
                                     Tempo(2000)
                                     Tempo(1)
                                     LimpaTela
@@ -345,7 +367,7 @@ Inicio
 
                               Se maiusc(adic_dados) = "S" ENTAO
 
-                                 Escreval("Usu·rio cadastrado com sucesso.")
+                                 Escreval("Usu√°rio cadastrado com sucesso.")
                                  Tempo(2000)
                                  Tempo(2)
                                  LimpaTela
@@ -368,7 +390,7 @@ Inicio
                            LimpaTela
                         OutroCASO
                            cad()
-                           Escreval("OP«√O INVALIDA...")
+                           Escreval("OP√á√ÉO INVALIDA...")
                            LimpaTela
                            Tempo(2000)
                            Tempo(1)
@@ -382,7 +404,7 @@ Inicio
                         Escreval("[1] - CADASTRAR NOVO EQUIPAMENTO")
                         Escreval("[2] - RETORNAR AO MENU")
                         Escreval()
-                        Escreva("OP«√O: ")
+                        Escreva("OP√á√ÉO: ")
                         Leia(cad_equip)
                         LimpaTela
 
@@ -399,36 +421,36 @@ Inicio
                               Escreval("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
                               Escreval("|          LIMITE EXCEDIDO DE CADASTROS              |")
                               Escreval("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-                              Tempo(4000)
+                              Tempo(10000)
                               Tempo(2)
                               LimpaTela
                            Senao
                               Para c de 1 ate b faca
                                  cad()
                                  adic <- adic + 1
-                                 Escreval("Descreva as Caracteristicas do",adic,"∞ equipamento:")
+                                 Escreval("Descreva as Caracteristicas do",adic,"¬∞ equipamento:")
                                  Escreva("--> ")
                                  Leia(pc[adic])
                                  Escreval()
-                                 Escreval("Descreva a anomalia do",adic,"∫ equipamento:")
+                                 Escreval("Descreva a anomalia do",adic,"¬∫ equipamento:")
                                  Escreva("--> ")
                                  Leia(condicao[adic])
                                  Escreval()
-                                 Escreva("N˙mero identificador da",adic,"™ sala: ")
+                                 Escreva("N√∫mero identificador da",adic,"¬™ sala: ")
                                  Leia(equipamentoSala[adic])
                                  Escreval()
-                                 Escreval("Selecione o tipo de instalaÁ„o:")
+                                 Escreval("Selecione o tipo de instala√ß√£o:")
                                  Escreval()
                                  Escreval("[1] CORREDOR")
                                  Escreval("[2] BLOCO")
-                                 Escreval("[3] LABORAT”RIO")
+                                 Escreval("[3] LABORAT√ìRIO")
                                  Escreval("[4] BIBLIOTECA")
                                  Escreval("[5] SECRETARIA")
                                  Escreval("[6] DIRETORIA")
-                                 Escreval("[7] DEP”SITO")
+                                 Escreval("[7] DEP√ìSITO")
                                  Escreval("[8] ALMAXARIFADO")
                                  Escreval()
-                                 Escreva("OP«√O: ")
+                                 Escreva("OP√á√ÉO: ")
                                  Leia(estal)
                                  Escreval()
 
@@ -444,7 +466,7 @@ Inicio
 
                                  CASO 3
 
-                                    estal_type[adic] <- "LABORAT”RIO"
+                                    estal_type[adic] <- "LABORAT√ìRIO"
 
                                  CASO 4
 
@@ -468,7 +490,7 @@ Inicio
 
                                  FimEscolha
 
-                                 Escreva("Identifique a designaÁ„o vogal correspondente a",adic,"™ sala: ")
+                                 Escreva("Identifique a designa√ß√£o vogal correspondente a",adic,"¬™ sala: ")
                                  Leia(equipamentoCorredor[adic])
                                  equipamentoCorredor[adic] <- maiusc(equipamentoCorredor[adic])
                                  tipo_letra[adic] <-  estal_type[adic] + " " + equipamentoCorredor[adic]
@@ -484,7 +506,7 @@ Inicio
                            LimpaTela
                         OutroCASO
                            cad()
-                           Escreval("OP«√O INVALIDA...")
+                           Escreval("OP√á√ÉO INVALIDA...")
                            LimpaTela
                            Tempo(2000)
                            Tempo(1)
@@ -499,7 +521,7 @@ Inicio
                         Escreval("[2] - REGISTROS POR SALA")
                         Escreval("[3] - RETORNAR AO MENU")
                         Escreval()
-                        Escreva("OP«√O: ")
+                        Escreva("OP√á√ÉO: ")
                         Leia(salapesq)
                         LimpaTela
 
@@ -517,19 +539,19 @@ Inicio
 
                         CASO 2
                            demon()
-                           Escreval("Selecione o tipo de instalaÁ„o:")
+                           Escreval("Selecione o tipo de instala√ß√£o:")
                            Escreval()
                            Escreval("[1] CORREDOR")
                            Escreval("[2] BLOCO")
-                           Escreval("[3] LABORAT”RIO")
+                           Escreval("[3] LABORAT√ìRIO")
                            Escreval("[4] BIBLIOTECA")
                            Escreval("[5] SECRETARIA")
                            Escreval("[6] DIRETORIA")
-                           Escreval("[7] DEP”SITO")
+                           Escreval("[7] DEP√ìSITO")
                            Escreval("[8] ALMAXARIFADO")
                            Escreval("[9] RETORNAR AO MENU")
                            Escreval()
-                           Escreva("OP«√O: ")
+                           Escreva("OP√á√ÉO: ")
                            Leia(estal_pesq)
                            LimpaTela
                            Escreval()
@@ -546,7 +568,7 @@ Inicio
 
                            CASO 3
 
-                              estal_type_pesq <- "LABORAT”RIO"
+                              estal_type_pesq <- "LABORAT√ìRIO"
 
                            CASO 4
 
@@ -579,7 +601,7 @@ Inicio
                            cont_adic <- 0
 
                            demon()
-                           Escreva("Identifique a designaÁ„o vogal correspondente: ")
+                           Escreva("Identifique a designa√ß√£o vogal correspondente: ")
                            Leia(desig_pesq)
                            desig_pesq <- maiusc(desig_pesq)
                            tipoLetra <- estal_type_pesq + " " + desig_pesq
@@ -589,7 +611,7 @@ Inicio
                               FimSe
                            fimpara
                            Escreval()
-                           Escreval("Quantidade de ocorrÍncias encontradas: ", cont_adic)
+                           Escreval("Quantidade de ocorr√™ncias encontradas: ", cont_adic)
                            Escreval()
                            Escreval("----------------------------------------------------")
                         FimSe
@@ -607,8 +629,8 @@ Inicio
                                  Escreval("----------------------------------------------------")
                                  Escreval()
                                  Escreval("* Equipamento: " ,pc[i])
-                                 Escreval("* CondiÁ„o: " ,condicao[i])
-                                 Escreval("LocalizaÁ„o: ", estal_type[i], " ", maiusc(equipamentoCorredor[i]), " Sala ", equipamentosala[i])
+                                 Escreval("* Condi√ß√£o: " ,condicao[i])
+                                 Escreval("Localiza√ß√£o: ", estal_type[i], " ", maiusc(equipamentoCorredor[i]), " Sala ", equipamentosala[i])
                                  Escreval()
                                  Escreval("----------------------------------------------------")
                               FimSe
@@ -635,7 +657,7 @@ Inicio
                      LimpaTela
                   OutroCASO
                      demon()
-                     Escreval("OP«√O INVALIDA...")
+                     Escreval("OP√á√ÉO INVALIDA...")
                      LimpaTela
                      Tempo(2000)
                      Tempo(1)
@@ -650,7 +672,7 @@ Inicio
                   Escreval("[1] - EDITAR EQUIPAMENTO")
                   Escreval("[2] - RETORNAR AO MENU")
                   Escreval()
-                  Escreva("OP«√O: ")
+                  Escreva("OP√á√ÉO: ")
                   Leia(op_edicao)
                   LimpaTela
                   edt()
@@ -662,18 +684,18 @@ Inicio
                         Condic()
                         Escreval("Identifique o equipamento a ser editado?")
                         Escreval()
-                        Escreva("OP«√O: ")
+                        Escreva("OP√á√ÉO: ")
                         Leia(pc_e)
                         LimpaTela
                         edt()
-                        Escreval("O equipamento a ser editado È: ",pc[pc_e])
+                        Escreval("O equipamento a ser editado √©: ",pc[pc_e])
                         Escreval()
                         Escreval("Descreva a nova caracteristica do equipamento: ")
                         Escreva("-> ")
                         Leia(pc[pc_e])
                         Escreval()
-                        Escreval("H· necessidade de atualizar a anomalia?")
-                        Escreva("OP«√O S/N: ")
+                        Escreval("H√° necessidade de atualizar a anomalia?")
+                        Escreva("OP√á√ÉO S/N: ")
                         Leia(op_edit)
                         op_edit <- maiusc(op_edit)
                         Se op_edit = "S"  ENTAO
@@ -682,8 +704,8 @@ Inicio
                            Escreva("-> ")
                            Leia(condicao[pc_e])
                            Escreval()
-                           Escreval("H· necessidade de editar a locaizaÁ„o?")
-                           Escreva("OP«√O S/N: ")
+                           Escreval("H√° necessidade de editar a locaiza√ß√£o?")
+                           Escreva("OP√á√ÉO S/N: ")
                            Leia(opc_edit)
                            opc_edit <- maiusc(opc_edit)
                            Se opc_edit = "S"  ENTAO
@@ -713,14 +735,14 @@ Inicio
                         op_edicao <- 2
 
                      CASO 2
-                        edt()
+
                         Escreval("RETORNANDO AO MENU...")
                         Tempo(1500)
                         Tempo(1)
                         LimpaTela
                      OutroCASO
                         edt()
-                        Escreval("OP«√O INVALIDA...")
+                        Escreval("OP√á√ÉO INVALIDA...")
                         LimpaTela
                         Tempo(2000)
                         Tempo(1)
@@ -735,7 +757,7 @@ Inicio
                      Escreval("[1] - EXCLUIR EQUIPAMENTO")
                      Escreval("[2] - RETORNAR AO MENU")
                      Escreval()
-                     Escreva("OP«√O: ")
+                     Escreva("OP√á√ÉO: ")
                      Leia(op_pesq)
                      LimpaTela
                      excl()
@@ -749,7 +771,7 @@ Inicio
                            Condic()
                            Escreval("Identifique o equipamento a ser excluido?")
                            Escreval()
-                           Escreva("OP«√O: ")
+                           Escreva("OP√á√ÉO: ")
                            Leia(pc_e)
                            LimpaTela
 
@@ -761,7 +783,7 @@ Inicio
                            condicao[adic] <- ""
                            adic <- adic - 1
                            excl()
-                           Escreval("Equipamento excluÌdo com sucesso!")
+                           Escreval("Equipamento exclu√≠do com sucesso!")
                            Tempo(2000)
                            Tempo(1)
                         FimSe
@@ -770,14 +792,14 @@ Inicio
                         LimpaTela
 
                      CASO 2
-                        excl()
+
                         Escreval("RETORNANDO AO MENU...")
                         Tempo(1500)
                         Tempo(1)
                         LimpaTela
                      OutroCASO
                         excl()
-                        Escreval("OP«√O INVALIDA...")
+                        Escreval("OP√á√ÉO INVALIDA...")
                         LimpaTela
                         Tempo(2000)
                         Tempo(1)
@@ -788,6 +810,7 @@ Inicio
 
                   confirm()
                   Escreval("LOGIN EM USO: ",maiusc(login))
+                  aguarde()
                   Escreval()
                   a <- 7
                   Tempo(3000)
@@ -803,7 +826,7 @@ Inicio
                OutroCASO
 
                   principal()
-                  Escreval("OP«√O INV¡LIDA...")
+                  Escreval("OP√á√ÉO INV√ÅLIDA...")
                   Tempo(2000)
                   Tempo(1)
                   LimpaTela
@@ -827,7 +850,7 @@ Inicio
             Tempo(100)
          senao
             principal()
-            Escreval("OP«√O INV¡LIDA...")
+            Escreval("OP√á√ÉO INV√ÅLIDA...")
             Tempo(2000)
             Tempo(1)
          FimSe
